@@ -1,0 +1,501 @@
+<style>
+    .sidebar-nav .nav li:first-child{
+        margin-top: 15%;
+    }
+    .dataTables_wrapper{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+
+    .svg{
+        fill: none;
+    }
+
+
+
+</style>
+<style>
+.buttons-excel{
+    background: url(../images/xl.png) !important;
+    background-size: 30px !important;
+    padding-top:17px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    margin-bottom: 7px !important;
+    background-color: #ffffff !important;
+    border: white !important;
+    -webkit-text-fill-color: rgba(236, 228, 228, 0.09) !important; 
+}
+.buttons-pdf{
+    background: url(../images/pdf1.png) !important;
+    background-size: 30px !important;
+    padding-top:17px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    margin-bottom: 7px !important; 
+    background-color: #ffffff !important;
+    border: white !important;
+    -webkit-text-fill-color: rgba(236, 228, 228, 0.09)!important; 
+}
+.buttons-copy{
+    background: url(../images/cp.png) !important;
+    background-size: 34px !important;
+    padding-top:17px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important; 
+    margin-bottom: 7px !important;
+    background-color: #ffffff !important;
+    border: white !important;
+    -webkit-text-fill-color: rgba(236, 228, 228, 0.09) !important; 
+}
+
+</style>
+<style>
+    .sidebar-nav .nav li:first-child{
+        margin-top: 15%;
+    }
+    .dataTables_wrapper{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+</style>
+<style>
+    .sidebar-nav .nav li:first-child{
+        margin-top: 15%;
+    }
+    .dataTables_wrapper{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+</style>
+
+
+
+
+
+<main class="main">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Dashboard</li>
+        <!-- <li class="breadcrumb-item">
+            <a href="#">Admin</a>
+        </li> -->
+        <li class="breadcrumb-item active">Pending Work Details</li>
+            
+<div class="sidebar">
+    <nav class="side-nav">
+        <ul class="nav nav-pills nav-stacked">
+         
+            <li class="nav-item">
+                <a class="nav-link active" ui-sref="main.home"><i class="nav-icon icon-home"></i> Dashboard</a>
+            </li>
+            <li class="nav-item nav-dropdown" >
+                <a class="nav-link  dropdown-btn " ui-sref="main.approved">
+                    <i class="nav-icon icon-list"></i> User List
+                </a>
+                <ul class="dropdown-container" style="margin-top:-24px; margin-top:2px;background-color:#ffffff;">
+                    <!-- <li class="nav-item" style="margin-left:-11px; padding:2px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.addnewuser">
+                    <i class="nav-icon icon-globe"></i>Add New User</a>
+                    </li> -->
+                   <!--  <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.approved">
+                            <i class="nav-icon icon-globe"></i> View Details</a>
+                    </li> -->
+                    <!-- <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.served">
+                            <i class="nav-icon icon-globe"></i> Remove user/Block user</a>
+                    </li> -->
+
+                </ul>
+
+            </li>
+
+             <li class="nav-item nav-dropdown" >
+                <a class="nav-link  dropdown-btn " ui-sref="main.deliveryreg">
+                    <i class="nav-icon icon-plus"></i>Delivery Boy
+                </a>
+                <ul class="dropdown-container" style="margin-top:-24px; margin-top:2px;background-color:#ffffff;">
+                    <!-- <li class="nav-item" style="margin-left:-11px; padding:2px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.addnewuser">
+                    <i class="nav-icon icon-globe"></i>Add New User</a>
+                    </li> -->
+                    <!-- <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.deliveryreg">
+                            <i class="nav-icon icon-globe"></i> Add Delivery Boy</a>
+                    </li> -->
+                    <!-- <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.served">
+                            <i class="nav-icon icon-globe"></i> Remove user/Block user</a>
+                    </li> -->
+
+                </ul>
+
+            </li>
+             <li class="nav-item nav-dropdown" >
+                <a class="nav-link nav-dropdown-toggle dropdown-btn " href="">
+                    <i class="nav-icon icon-globe"></i>Manage Bookings
+                </a>
+                <ul class="dropdown-container" style="margin-top:-24px; margin-top:2px;background-color:#ffffff;">
+                    <li class="nav-item " style=" padding:2px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.addLead">
+                    <i class=""></i>New order</a>
+                    </li>
+                    <li class="nav-item" style="background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.runningorder">
+                            <i class=""></i>Running order</a>
+                    </li>
+                    <li class="nav-item" style="background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.completeorder">
+                            <i class=""></i>Complete order</a>
+                    </li>
+                    <li class="nav-item" style="background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.served">
+                            <i class=""></i>Pending booking</a>
+                    </li>
+
+                </ul>
+
+            </li>
+            <li class="nav-item nav-dropdown" >
+                <a class="nav-link nav-dropdown-toggle dropdown-btn " href="">
+                    <i class="nav-icon icon-globe"></i> Manage vendors
+                </a>
+                <ul class="dropdown-container" style="margin-top:-24px; margin-top:2px;background-color:#ffffff;">
+                    <li class="nav-item" style=" padding:2px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.vendorprofile">
+                    <i class=""></i>Create profile 
+</a>
+                    </li>
+                    <li class="nav-item" style="background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class=""></i>Verify + KYC</a>
+                    </li>
+                    <li class="nav-item" style="background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.partner">
+                            <i class=""></i>View Profile details </a>
+                    </li>
+                    <li class="nav-item" style="background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class=""></i>Edit profile </a>
+                    </li>
+                    <!-- <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.partner">
+                            <i class="nav-icon icon-users"></i>Block/Delete Vendor </a>
+                    </li> -->
+                </ul>
+
+            </li>
+            <li class="nav-item nav-dropdown" >
+                <a class="nav-link  dropdown-btn " ui-sref="main.createmenu">
+                    <i class="nav-icon icon-globe"></i>Menu 
+
+                </a>
+                <!-- <ul class="dropdown-container" style="margin-top:-24px; margin-top:2px;background-color:#ffffff;">
+                    <li class="nav-item" style="margin-left:-11px; padding:2px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.createmenu">
+                    <i class="nav-icon icon-users"></i>Create menu Category 
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class="nav-icon icon-globe"></i>Create Menu Sub</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.addMenu">
+                            <i class="nav-icon icon-globe"></i>View details 
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class="nav-icon icon-globe"></i> Edit details 
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class="nav-icon icon-globe"></i>Remove details 
+ 
+</a>
+                    </li>
+                
+
+                </ul>
+
+            </li> -->
+            <li class="nav-item nav-dropdown" >
+                <a class="nav-link  dropdown-btn " ui-sref="main.subscribe">
+                    <i class="nav-icon icon-credit-card"></i>Offers
+                                    </a>
+                <!-- <ul class="dropdown-container" style="margin-top:-24px; margin-top:2px;background-color:#ffffff;">
+                    <li class="nav-item" style="margin-left:-11px; padding:2px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.subscribe">
+                    <i class="nav-icon icon-credit-card"></i>Offer Settings 
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class="nav-icon icon-credit-card"></i>Time and costing setting </a>
+                    </li>
+                    
+
+                </ul> -->
+
+            </li>
+           <!--  <li class="nav-item nav-dropdown" >
+                <a class="nav-link nav-dropdown-toggle dropdown-btn " href="">
+                    <i class="nav-icon icon-credit-card"></i>Manage offers 
+
+                                    </a>
+                <ul class="dropdown-container" style="margin-top:-24px; margin-top:2px;background-color:#ffffff;">
+                    <li class="nav-item" style="margin-left:-11px; padding:2px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                    <i class="nav-icon icon-envelope"></i>Tag Vendors to offer 
+</a>
+                    </li>
+                    
+                   
+
+                </ul>
+
+            </li> -->
+
+            
+             <li class="nav-item nav-dropdown" >
+                <a class="nav-link nav-dropdown-toggle dropdown-btn " href="">
+                    <i class="nav-icon icon-credit-card"></i>Manage payment 
+ 
+
+                                    </a>
+                <ul class="dropdown-container" style="margin-top:-24px; margin-top:2px;background-color:#ffffff;">
+                    <li class="nav-item" style="margin-left:-11px; padding:2px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                    <i class="nav-icon icon-users"></i> Online Payment 
+ 
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.addSnp">
+                            <i class="nav-icon icon-globe"></i>Offline Payment 
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.addSnp">
+                            <i class="nav-icon icon-globe"></i>Vendros’ Percentage
+ 
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class="nav-icon icon-globe"></i> View details 
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class="nav-icon icon-globe"></i>Update status
+ 
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class="nav-icon icon-globe"></i>Payment History
+ 
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class="nav-icon icon-globe"></i>View details 
+
+ 
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class="nav-icon icon-globe"></i>Update status 
+
+
+ 
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class="nav-icon icon-globe"></i>Payment history 
+
+
+
+ 
+</a>
+                    </li>
+                
+
+                </ul>
+       
+             <li class="nav-item nav-dropdown" >
+                <a class="nav-link nav-dropdown-toggle dropdown-btn " href="">
+                    <i class="nav-icon icon-credit-card"></i>Application  
+ 
+ 
+
+                                    </a>
+                <ul class="dropdown-container" style="margin-top:-24px; margin-top:2px;background-color:#ffffff;">
+                    <li class="nav-item" style="margin-left:-11px; padding:2px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                    <i class="nav-icon icon-users"></i>Upload banner 
+
+ 
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class="nav-icon icon-globe"></i>Update Location 
+
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class="nav-icon icon-globe"></i>About us
+
+ 
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class="nav-icon icon-globe"></i>Contact us
+
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class="nav-icon icon-globe"></i>Privacy policy
+
+ 
+</a>
+                    </li>
+                    
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class="nav-icon icon-globe"></i>Terms and conditions
+ 
+
+ 
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class="nav-icon icon-globe"></i>Payment History 
+
+
+ 
+</a>
+                    </li>
+                    <li class="nav-item" style="margin-left:-11px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class="nav-icon icon-globe"></i>Payment history 
+
+
+
+ 
+</a>
+                    </li>
+                
+
+                </ul>
+            
+           
+            <!-- <li class="nav-item">
+                <a class="nav-link" ui-sref="main.broadcast">
+                <i class="nav-icon icon-globe"></i> Broadcast Message</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="main.misreport">
+                <i class="nav-icon fa fa-credit-card"></i>MIS Report</a>
+            </li> -->
+          <!-- <li class="nav-item nav-dropdown" >
+                <a class="nav-link nav-dropdown-toggle dropdown-btn " ui-sref="main.amc">
+                    <i class="nav-icon icon-credit-card"></i>Mom Data 
+ 
+ 
+
+                                    </a>
+                
+
+                </ul>
+            
+ 
+
+        </ul>
+        
+        </li> -->
+      
+
+
+    </nav>        <li class="breadcrumb-menu d-md-down-none">
+            <div class="btn-group" role="group" aria-label="Button group">
+                <!-- <a class="btn" href="#">
+                    <i class="icon-speech"></i>
+                </a>
+                <a class="btn" href="./"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+                <a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a> -->
+            </div>
+        </li>
+    </ol>
+        
+    <div class="container-fluid">
+        <div>
+            <div class="animated fadeIn">
+                
+                <div class="card">
+                    <div class="card-header" style="background-color: white">
+                        <i class="fa fa-edit"></i> Pending Work Order
+                        <div class="card-header-actions">
+                            <a class="card-header-action" href="#" target="_blank"><small class="text-muted"></small></a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer" id="DataTables_Table_0_wrapper">
+                            <div class="row">
+                                <div class="col-sm-12" id="runningOrdersTable">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main> 
+
+
+    <!-- main page script -->
+    
+ <!--   --> <script src="/js/bootstrap.min.js"></script>
+<!-- <script src="js/jquery.min.js"></script> -->
+ 
+
+  
+  <!-- <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+    </script> -->

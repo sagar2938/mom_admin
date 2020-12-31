@@ -1,0 +1,547 @@
+<style>
+    .sidebar-nav .nav li:first-child{
+        margin-top: 15%;
+    }
+    .dataTables_wrapper{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+
+    .svg{
+        fill: none;
+    }
+
+
+
+</style>
+<style>
+.buttons-excel{
+    background: url(../images/xl.png) !important;
+    background-size: 30px !important;
+    padding-top:17px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    margin-bottom: 7px !important;
+    background-color: #ffffff !important;
+    border: white !important;
+    -webkit-text-fill-color: rgba(236, 228, 228, 0.09) !important; 
+}
+.buttons-pdf{
+    background: url(../images/pdf1.png) !important;
+    background-size: 30px !important;
+    padding-top:17px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    margin-bottom: 7px !important; 
+    background-color: #ffffff !important;
+    border: white !important;
+    -webkit-text-fill-color: rgba(236, 228, 228, 0.09)!important; 
+}
+.buttons-copy{
+    background: url(../images/cp.png) !important;
+    background-size: 34px !important;
+    padding-top:17px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important; 
+    margin-bottom: 7px !important;
+    background-color: #ffffff !important;
+    border: white !important;
+    -webkit-text-fill-color: rgba(236, 228, 228, 0.09) !important; 
+}
+
+</style>
+<style>
+    .sidebar-nav .nav li:first-child{
+        margin-top: 15%;
+    }
+    .dataTables_wrapper{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+</style>
+<style>
+    .sidebar-nav .nav li:first-child{
+        margin-top: 15%;
+    }
+    .dataTables_wrapper{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+</style>
+
+
+
+
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+
+
+<main class="main">
+    
+
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active"></li>
+        <li class="breadcrumb-menu d-md-down-none">
+            <div aria-label="Button group" class="btn-group" role="group">
+                
+            </div>
+        </li>
+    </ol>
+    <div class="container-fluid" style="background-color: #f6f7f8">
+        <div id="ui-view">
+            <div>
+                <div class="animated fadeIn" style="background-color: #f6f7f8">
+
+                    <div class="animated fadeIn">
+                        <div class="card-group mb-3">
+                         <div class="col-sm-12">
+                                <h4 >Website Lead</h4>      
+                            </div>
+                        
+                            <div class="col-sm-3">
+                                <div class="card w3-card"  style="border:1px solid #dedede">
+                                    <div class="card-header" style="background-color: white;">
+                                        <h4>View</h4>
+                                        <p style="color: #9a9a9a;">Details</p>
+                                    </div>
+                                    <a  ui-sref="main.websitevendor">
+                                    <div class="card-body" ui-sref="main.websitevendor" style="margin-top: -18px;">
+                                       <div style="float: left;padding-top: 13px;">
+                                        <i class="fa fa-share fa-4x" aria-hidden="true" style="color:#6bd098"></i> </div>
+                                        <div style="padding-left: 84px;">
+                                        <h4 >Mom List</h4>
+                                        <h2>{{running}}</h2>
+                                    </div> 
+                                    </a> 
+                                        
+                                    </div>
+
+
+                                   
+                                </div>
+
+
+                            
+
+                            </div>
+
+
+                             
+
+                        <!-- 
+                            <div class="col-sm-12">
+                                <h4>Contacted Us</h4>      
+                            </div>
+                             -->
+                            <div class="col-sm-3">
+                                <div class="card w3-card" style="border:1px solid #dedede">
+                                    <div class="card-header" style="background-color: white;">
+                                        <h4>View</h4>
+                                        <p style="color: #9a9a9a;">WebApp</p>
+                                    </div>
+                                    <a  ui-sref="main.contact">
+                                    <div class="card-body" ui-sref="main.contact" style="margin-top: -18px;" >
+                                       <div style="float: left;padding-top: 13px;">
+                                        <i class="fa fa-list fa-4x" aria-hidden="true" style="color:#6bd098"></i> </div>
+                                        <div style="padding-left: 84px;">
+                                        <h4>Contacted List</h4>
+                                        <h2>{{to}}</h2>
+                                    </div>  
+                                </a>
+                                    </div>
+                                    
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="col-sm-3">
+                                <div class="card w3-card" style="border:1px solid #dedede">
+                                    <div class="card-header" style="background-color: white;">
+                                        <h4>View</h4>
+                                        <p style="color: #9a9a9a;">Details</p>
+                                    </div>
+                                    <a  ui-sref="main.price">
+                                    <div class="card-body" ui-sref="main.price" style="margin-top: -18px;">
+                                       <div style="float: left;padding-top: 13px;">
+                                        <i class="fa fa-share fa-4x" aria-hidden="true" style="color:#6bd098"></i> </div>
+                                        <div style="padding-left: 84px;">
+                                        <h4>Price List</h4>
+                                        <h2>{{running}}</h2>
+                                    </div> 
+                                    </a> 
+                                        
+                                    </div>
+                            </div>
+                            </div>
+
+
+                            <div class="col-sm-3">
+                                <div class="card w3-card" style="border:1px solid #dedede">
+                                    <div class="card-header" style="background-color: white;">
+                                        <h4>View</h4>
+                                        <p style="color: #9a9a9a;">Details</p>
+                                    </div>
+                                    <a  ui-sref="main.approved">
+                                    <div class="card-body" ui-sref="main.approved" style="margin-top: -18px;">
+                                       <div style="float: left;padding-top: 13px;">
+                                        <i class="fa fa-share fa-4x" aria-hidden="true" style="color:#6bd098"></i> </div>
+                                        <div style="padding-left: 84px;">
+                                        <h4>User List</h4>
+                                        <h2>{{running}}</h2>
+                                    </div> 
+                                    </a> 
+                                        
+                                    </div>
+                            </div>
+                            </div>
+
+
+
+
+                          
+
+                             <div class="animated fadeIn">
+                        <div class="card-group mb-3">
+                            <div class="col-sm-12">
+                                <h4 >Manage Order Vendor Wise</h4>      
+                            </div>
+                            
+                            <div class="col-sm-3" >
+                                <div class="card w3-card" style="border:1px solid #dedede">
+                                    <div class="card-header" style="background-color: white;">
+                                        <h4>New Order</h4>
+                                        <p style="color: #9a9a9a;">Details</p>
+                                    </div>
+                                    <a ui-sref="main.addLead" >
+                                    <div class="card-body" ui-sref="main.neworder" style="margin-top: -18px;" >
+                                       <div style="float: left;padding-top: 13px;">
+                                        <i class="fa fa-list fa-4x" aria-hidden="true" style="color:#6bd098"></i> </div>
+                                        <div style="padding-left: 84px;">
+                                        <h4> Unassign Order</h4>
+                                        <h2>{{upcoming}}</h2>
+                                    </div>  
+                                </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                             <div class="col-sm-3" >
+                                <div class="card w3-card" style="border:1px solid #dedede">
+                                    <div class="card-header" style="background-color: white;">
+                                        <h4>Complete Order</h4>
+                                        <p style="color: #9a9a9a;">Details</p>
+                                    </div>
+                                    <a ui-sref="main.completeorder" >
+                                    <div class="card-body" ui-sref="main.completeorder" style="margin-top: -18px;" >
+                                       <div style="float: left;padding-top: 13px;">
+                                        <i class="fa fa-list fa-4x" aria-hidden="true" style="color:#6bd098"></i> </div>
+                                        <div style="padding-left: 84px;">
+                                        <h4>Complete Order List</h4>
+                                        <h2>{{upcoming}}</h2>
+                                    </div>  
+                                </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+
+                            
+                            <div class="col-sm-3">
+                                <div class="card w3-card" style="border:1px solid #dedede">
+                                    <div class="card-header" style="background-color: white;">
+                                        <h4>Unassigned Order</h4>
+                                        <p style="color: #9a9a9a;">Details</p>
+                                    </div>
+                                    <a  ui-sref="main.uassignorder">
+                                    <div class="card-body" ui-sref="main.uassignorder" style="margin-top: -18px;">
+                                       <div style="float: left;padding-top: 13px;">
+                                        <i class="fa fa-share fa-4x" aria-hidden="true" style="color:#6bd098"></i> </div>
+                                        <div style="padding-left: 84px;">
+                                        <h4>Unassigned Order List</h4>
+                                        <h2>{{running}}</h2>
+                                    </div> 
+                                    </a> 
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                             <div class="col-sm-3">
+                                <div class="card w3-card" style="border:1px solid #dedede">
+                                    <div class="card-header" style="background-color: white;">
+                                        <h4>Vendor Order</h4>
+                                        <p style="color: #9a9a9a;">Details</p>
+                                    </div>
+                                    <a  ui-sref="main.vendorwiseorder">
+                                    <div class="card-body" ui-sref="main.vendorwiseorder" style="margin-top: -18px;">
+                                       <div style="float: left;padding-top: 13px;">
+                                        <i class="fa fa-share fa-4x" aria-hidden="true" style="color:#6bd098"></i> </div>
+                                        <div style="padding-left: 84px;">
+                                        <h4>Vendor Wise Order</h4>
+                                        <h2>{{running}}</h2>
+                                    </div> 
+                                    </a> 
+                                        
+                                    </div>
+                                   </div>
+                                </div>
+
+                            <div class="col-sm-12">
+                                <h4 >Manage Mom Chef</h4>      
+                            </div>
+                           
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="card w3-card" style="border:1px solid #dedede">
+                                    <div class="card-header" style="background-color: white;">
+                                        <h4>Create Profile</h4>
+                                        <p style="color: #9a9a9a;">Vendors</p>
+                                    </div>
+                                    <a  ui-sref="main.vendorprofile">
+                                    <div class="card-body" ui-sref="main.vendorprofile" style="margin-top: -18px;" >
+                                       <div style="float: left;padding-top: 13px;">
+                                        <i class="fa fa-list fa-4x" aria-hidden="true" style="color:#6bd098"></i> </div>
+                                        <div style="padding-left: 84px;">
+                                        <!-- <h4> UnAssigned</h4>
+                                        <h2>{{to}}</h2> -->
+                                    </div>  
+                                </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="card w3-card" style="border:1px solid #dedede">
+                                    <div class="card-header" style="background-color: white;">
+                                        <h4>Verify + KYC</h4>
+                                        <p style="color: #9a9a9a;">All Verified List</p>
+                                    </div>
+                                    <a  ui-sref="main.partner">
+                                    <div class="card-body" ui-sref="main.partner" style="margin-top: -18px;">
+                                       <div style="float: left;padding-top: 13px;">
+                                        <i class="fa fa-share fa-4x" aria-hidden="true" style="color:#6bd098"></i> </div>
+                                        <div style="padding-left: 84px;">
+                                       <!--  <h4>Assigned</h4>
+                                        <h2>{{tobe}}</h2> -->
+                                    </div> 
+                                    </a> 
+                                        
+                                    </div>
+                                   
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="col-sm-3">
+                                <div class="card w3-card">
+                                    <div class="card-header" style="background-color: white;">
+                                        <h4>Vendors List</h4>
+                                        <p style="color: #9a9a9a;">All Vendors</p>
+                                    </div>
+                                    <a  ui-sref="main.partner">
+                                    <div class="card-body" ui-sref="main.partner" style="margin-top: -18px;" >
+                                        <div style="float: left;padding-top: 13px;">
+                                        <i class="fa fa-map fa-4x" aria-hidden="true" style="color:#6bd098;    margin-bottom: 22px;"></i> </div>
+                                        <div style="padding-left: 84px;">
+                                        <!-- <h4>Complete </h4>
+                                        <h2>{{done}}</h2> -->
+                                    </div>  
+                                    </div>
+
+                                </div>
+                                </a>
+                            </div>
+                        
+                   <div class="animated fadeIn">
+                        <div class="card-group mb-3">
+                            <div class="col-sm-12">
+                                <h4 >Manage Delivery Boy</h4>      
+                            </div>
+                            
+                            <div class="col-sm-3" >
+                                <div class="card w3-card" style="border:1px solid #dedede">
+                                    <div class="card-header" style="background-color: white;">
+                                        <h4>Add New Delivery Boy</h4>
+                                        <p style="color: #9a9a9a;">Add</p>
+                                    </div>
+                                    <a ui-sref="main.deliveryreg" >
+                                    <div class="card-body" ui-sref="main.deliveryreg" style="margin-top: -18px;" >
+                                       <div style="float: left;padding-top: 13px;">
+                                        <i class="fa fa-list fa-4x" aria-hidden="true" style="color:#6bd098"></i> </div>
+                                        <div style="padding-left: 84px;">
+                                        <h4>User</h4>
+                                        <h2>{{upcoming}}</h2>
+                                    </div>  
+                                </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+
+                            
+                            <div class="col-sm-3">
+                                <div class="card w3-card" style="border:1px solid #dedede">
+                                    <div class="card-header" style="background-color: white;">
+                                        <h4>View</h4>
+                                        <p style="color: #9a9a9a;">Details</p>
+                                    </div>
+                                    <a  ui-sref="main.deliverylist">
+                                    <div class="card-body" ui-sref="main.deliverylist" style="margin-top: -18px;">
+                                       <div style="float: left;padding-top: 13px;">
+                                        <i class="fa fa-share fa-4x" aria-hidden="true" style="color:#6bd098"></i> </div>
+                                        <div style="padding-left: 84px;">
+                                        <h4>List</h4>
+                                        <h2>{{running}}</h2>
+                                    </div> 
+                                    </a> 
+                                        
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            
+
+
+
+                   
+
+                               
+
+                           
+                            
+                    <!-- <div class="col-sm-12">
+                                <h4>Price Info</h4>      
+                            </div>
+                            
+                            <div class="col-sm-3">
+                                <div class="card w3-card" style="border:1px solid #dedede">
+                                    <div class="card-header" style="background-color: white;">
+                                        <h4>View</h4>
+                                        <p style="color: #9a9a9a;">Details</p>
+                                    </div>
+                                    <a  ui-sref="main.price">
+                                    <div class="card-body" ui-sref="main.price" style="margin-top: -18px;">
+                                       <div style="float: left;padding-top: 13px;">
+                                        <i class="fa fa-share fa-4x" aria-hidden="true" style="color:#6bd098"></i> </div>
+                                        <div style="padding-left: 84px;">
+                                        <h4>Price List</h4>
+                                        <h2>{{running}}</h2>
+                                    </div> 
+                                    </a> 
+                                        
+                                    </div>
+                            </div>
+                            </div> -->
+
+
+                            <div class="col-sm-12">
+                                <h4>Manage Offer</h4>      
+                            </div>
+                            
+                            <div class="col-sm-3">
+                                <div class="card w3-card" style="border:1px solid #dedede">
+                                    <div class="card-header" style="background-color: white;">
+                                        <h4>Create Offers</h4>
+                                        <p style="color: #9a9a9a;">Booking</p>
+                                    </div>
+                                    <a  ui-sref="main.subscribe">
+                                    <div class="card-body" ui-sref="main.subscribe" style="margin-top: -18px;" >
+                                       <div style="float: left;padding-top: 13px;">
+                                        <i class="fa fa-list fa-4x" aria-hidden="true" style="color:#6bd098"></i> </div>
+                                        <div style="padding-left: 84px;">
+                                        <!-- <h4> UnAssigned</h4>
+                                        <h2>{{to}}</h2> -->
+                                    </div>  
+                                </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="card w3-card" style="border:1px solid #dedede">
+                                    <div class="card-header" style="background-color: white;">
+                                        <h4>Offer List</h4>
+                                        <p style="color: #9a9a9a;">All available offer</p>
+                                    </div>
+                                    <a  href="/#!/main/list-view">
+                                    <div class="card-body" href="/#!/main/list-view"  style="margin-top: -18px;">
+                                       <div style="float: left;padding-top: 13px;">
+                                        <i class="fa fa-share fa-4x" aria-hidden="true" style="color:#6bd098"></i> </div>
+                                        <div style="padding-left: 84px;">
+                                       <!--  <h4>Assigned</h4>
+                                        <h2>{{tobe}}</h2> -->
+                                    </div> 
+                                    </a> 
+                                        
+                                    </div>
+                                   
+                                </div>
+
+                            </div>
+
+
+
+
+                            </div>
+                           
+
+                            </div>
+
+                            
+                        </div>
+
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                            
+
+</main>
+
+
+
+<!-- <script src="/js/bootstrap.min.js"></script> -->
+<!-- <script src="js/jquery.min.js"></script> -->
+ 
+
+  
+ <!--  <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+    </script> -->
+

@@ -1,0 +1,493 @@
+
+
+<style>
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  /*font-size: 22px;*/
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+   .sidebar-nav .nav li:first-child{
+        margin-top: 15%;
+    }
+    .dataTables_wrapper{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+
+    .svg{
+        fill: none;
+    }
+
+.email-signup-thankyou{
+  font-family:sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  /*background: #333;*/
+  /*padding:10%;*/
+  }
+  .content{
+    margin: auto !important;  /* Magic! */
+    max-width:705px !important;
+    color:#333 !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.55), 0 3px 6px rgba(0,0,0,0.23) !important;
+    background:url('https://www.crafta.co.il/images/paper-plane.gif') no-repeat #fff !important;
+    background-position: right 5px bottom 5px !important;
+    background-size: 10em !important;
+    text-align:center !important;
+    position: relative !important;
+    padding:10% !important;
+    border-radius:5px !important;
+    }
+    .left-hole,.right-hole{
+      position: absolute !important;
+      width:20px; height:20px !important;
+      background:#333 !important;
+      border-radius:50% !important;
+      top:15px !important;
+    }
+    .left-hole{
+      left:15px !important;
+      top:10px !important;
+    }
+    .right-hole{
+      right:15px !important;
+      top:10px !important;
+    }
+    .main-content h1 {
+        color:#333;
+        text-transform:uppercase;
+        margin-top:-2%;
+        font-size:2.5em;
+        font-weight:900;
+      }
+      @media only screen and (min-width: 1200px){
+    .banner-btmg1, .w3layouts-reg-form {
+     width: 38.33%; 
+}
+}
+.vertical-center {
+  margin: 0 ! important;
+ /* position: absolute ! important;*/
+  top: 50% ! important;
+  -ms-transform: translateY(-50%) ! important;
+  transform: translateY(-378%) ! important;
+  color: #fff;"
+}
+
+
+
+
+
+
+  </style>    
+
+
+<main class="main ng-scope">
+  <ol class="breadcrumb">
+    <!-- <li class="breadcrumb-item">Dashboard</li>
+        <li class="breadcrumb-item active">Add Employee</li> -->
+    <li class="breadcrumb-menu d-md-down-none">
+      
+
+   <div class="col-sm-12" style="margin-left: -94px ! important; ">
+                                <a class="w3-btn" href="/#!/main/list-view" style="float: right;background: #e9602a; border: none;color: white;padding: 5px 23px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 10px;">List</a>
+                            </div>
+
+    </li>
+  </ol>
+  <div class="container-fluid">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+      <strong class="ng-binding"></strong>
+    </div>
+    <div data-select2-id="ui-view" id="ui-view">
+      <div class="animated fadeIn">
+        <div class="row">
+        <div class="col-sm-12 col-md-12" style=" margin-right: 32px;" >
+            <div class="card card-accent-info">
+              <div class="card-header" style="text-align:center;color:red;font-size:18px;">
+                Add Offer
+              </div><!--  <form role="form" ng-submit="basicInput()" name="basicempdetails" enctype="multipart/form-data"> -->
+              <form class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern" enctype="multipart/form-data" id="basicempdetails" name="basicempdetails" role="form" ng-show="servce_form" >
+                <hr>
+                <br>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="md-person-add"></i></span>
+                  <div class="col-sm-4" style="padding-left:25px;">
+                    <div class="fg-line" style="width:90%;">
+                      <input class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" placeholder="Offer Name" ng-model="offer_name" required="" style="height:35px;padding-left:14px;" type="text" >
+                    </div>
+                  </div>
+
+
+                  <div class="col-sm-4" style="padding-left:30px;">
+                    <div class="fg-line" style="width:90%;">
+                      <input class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"  required="" style="height:35px;padding-left:14px;" type="text"  placeholder="Offer Type" ng-model="offer_type">
+                    </div>
+                  </div>
+                  
+                  <div class="col-sm-4" style="padding-left:30px;">
+                    <div class="fg-line" style="width:90%;">
+                      <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" id="search_term" placeholder="Discount up to" ng-model="discount" required="" style="height:35px;padding-left:12px;" type="number" > <!-- <input type="text" class="form-control " name="term"  id="search_term" ng-model="address" 
+                    placeholder="Serach.." style="height:35px;padding-left:12px;"> -->
+                    </div>
+                  </div>
+                </div><br>
+                <br>
+           
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="md md-person"></i></span>
+                  <div class="col-sm-4" style="padding-left:25px;">
+                    <div class="fg-line" style="width:  :90%;">
+                      <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Max Discount(%)" ng-model="maxdiscount" required="" style="height:35px;padding-left:12px;width: 265px;"  type="number" >
+                    </div>
+                  </div>
+
+            
+           
+            
+                  <div class="col-sm-4" style="padding-left:32px;">
+                    <div class="fg-line" style="width:90%;">
+                       <input type="number" class="form-control ng-pristine ng-valid ng-empty ng-touched" style="width:100%;height:34px;" placeholder="Valid UP To" ng-model="valid_to" id="valid_to" value="">
+                    </div>
+                  </div>
+                  <div class="col-sm-4" style="padding-left:30px;">
+                    <div class="fg-line" style="width:90%;">
+                      <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" ng-model="pvalues" id="pvalues" placeholder="Description" style="height:35px;padding-left:12px;" type="text" >
+                    </div>
+                  </div>
+
+
+                  <div class="col-sm-4" style="padding-left:32px;">
+                    <div class="fg-line select starval" style="width:90%;"></div>
+                  </div>
+                </div><br>
+                <br>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="md md-person"></i></span>
+                  <div class="col-sm-4" style="padding-left:25px;">
+                    <div class="fg-line" style="width:90%;">
+                      <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Promo Code" ng-model="promoCode"   style="height:35px;padding-left:12px;" type="text" >
+                    </div>
+                  </div>
+                  <div class="col-sm-4" style="padding-left:32px;">
+                     <div class="fg-line" style="width:90%;">
+                      <input class="form-control ng-pristine ng-untouched ng-valid ng-empty"   style="height:35px;padding-left:12px;"  placeholder="Chef Part" type="number"  ng-model="chefPart" id="chefPart">
+                    </div>
+                  </div>
+                  <div class="col-sm-4" style="padding-left:32px;">
+                    <div class="fg-line" style="width:90%;">
+                      <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Mom Part" ng-model="momPart"  id="momPart"  style="height:35px;padding-left:12px;" type="number" >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="input-group" style="margin-top: 45px;">
+                  <span class="input-group-addon"><i class="md md-person"></i></span>
+                  <div class="col-sm-4" style="padding-left:25px;">
+                    <div class="fg-line" style="width:90%;">
+                      <input class="form-control ng-pristine ng-untouched ng-valid ng-empty"   style="height:35px;padding-left:12px;" type="number" placeholder="Min Val"    ng-model="minVal" id="minVal">
+                    </div>
+                  </div>
+                  <div class="col-sm-4" style="padding-left:32px;">
+                     <div class="fg-line" style="width:90%;">
+                      <input class="form-control ng-pristine ng-untouched ng-valid ng-empty"   style="height:35px;padding-left:12px;" type="number" placeholder="Max Val"   ng-model="maxVal" id="maxVal">
+                    </div>
+                  </div>
+                  <div class="col-sm-4" style="padding-left:32px;">
+                   <div class="fg-line" style="width:90%;">
+                      <input class="form-control ng-pristine ng-untouched ng-valid ng-empty"   style="height:35px;padding-left:12px;" type="number" placeholder="Min Cart Value"   ng-model="minCartVal" id="minCartVal">
+                    </div>
+                  </div>
+               <!-- <div class="col-sm-4" style="padding-left: 26px;margin-top: 45px;">
+                    <div class="fg-line" style="width:90%;">
+                      <input class="form-control ng-pristine ng-untouched ng-valid ng-empty"   style="height:35px;padding-left:12px;" type="number" placeholder="Min Cart Value"   ng-model="minCartVal" id="minCartVal">
+                    </div>
+                  </div> -->
+
+
+                  <div class="col-sm-4" style="    padding-left: 33px;
+                   margin-top: 57px;">
+                    <div class="fg-line" >
+                      <label class="container">Allow Infinite Uses
+  <input type="checkbox" checked="checked" id="allowInfiniteUses" ng-model="allowInfiniteUses">
+  <span class="checkmark"></span>
+</label>
+                    </div>
+                  </div>
+
+               
+                </div>
+
+
+
+             
+
+
+              
+
+
+
+                <div class="col-sm-4" style="padding-left:32px;">
+                  <div class="fg-line select starval" style="width:90%;"></div>
+                </div>
+                <p class="c-black f-500 m-b-5 m-t-20" style="text-align:center;color:red;font-size: 18px;">Image Upload</p>
+                <hr>
+                <br>
+                <div class="ch-form-element input-label" style="padding-left:370px;padding-right:370px">
+                  <label class="custom-file-upload" for="file-upload">Upload Image</label> <!-- <input id="filename" ng-model="image" onchange="readURL(this);" required="" style="margin-top: 12px;" type="file"> -->
+                   <input id="blah2" onchange="readURL(this);" ng-model="imageurl"
+                                        custom-on-change="uploadFile" type="file"
+                                        accept=".xlsx,.xls,image/*,.doc,audio/*,.docx,video/*,.ppt,.pptx,.txt,.pdf"
+                                        multiple />
+                </div><br>
+                <br>
+                <div class="input-group">
+                  <div class="col-sm-12" style="padding-bottom:100px;padding-left:445px;">
+                    <button class="btn btn-primary btn-sm m-t-10 waves-effect waves-button waves-float" style="width: 120px; height: 40px;border-radius: 10px;font-size: 17px;" ng-click="AddOffers()" type="submit">Submit</button>
+                  </div>
+                </div>
+
+
+              </form>
+
+              
+               <form class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern" enctype="multipart/form-data" id="basicempdetails" name="basicempdetails" role="form" ng-show="contact_submit" >
+                <hr>
+                <br>
+                
+                    
+                  <div class="col-md-12 w3layouts-reg-form contact-form-row-agileinfo" style="margin-left: 334px;">
+                  <div class="content" >
+                    <div class="left-hole"></div>
+                    <div class="right-hole"></div>
+                    <div class="main-content">
+                      <h1>Success! Thank You</h1>
+                      <!-- <ul> -->
+                        <p>Thank you for submitting you information, it means a lot to us, just like you do! We really appreciate you giving us a moment of your time.</p>
+                        <p>One Click  Service.</p>
+                      <!-- </ul> -->
+                    </div>
+                  </div>
+                </div>
+
+            
+                 
+              </form>
+            </div>
+          
+          </div><br>
+        </div>
+        <script>
+
+        $('#datetimepicker').datetimepicker({format: 'd/m/Y'
+        });
+        $('#datetimepicker3').datetimepicker({format: 'd/m/Y'
+        });
+        $('#datetimepicker2').datetimepicker({format: 'd/m/Y'
+        });
+
+
+        $('.dropdown-el').click(function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $(this).toggleClass('expanded');
+            $('#'+$(e.target).attr('for')).prop('checked',true);
+        });
+
+
+        </script> 
+        <script>
+        function regExpGmail() {
+        return RegExp(/([a-zA-Z0-9]+)([\.{1}])?([a-zA-Z0-9]+)\@gmail([\.])com/g);
+        }
+
+        function regExpYahoo() {
+        return RegExp(/^[^@]+@(yahoo|ymail|rocketmail)\.(com|in|co\.uk)$/i);
+        }
+
+        function validateInputs() {
+        reGmail=regExpGmail();
+        reYahoo=regExpYahoo();
+
+        var result = true;
+
+        var nameCheck=$('#nameField').val();
+        var emailCheck=$('#emailField').val();
+        var compDetailsCheck=$('#compDetailsField').val();
+        var passwordCheck=$('#passwordvz').val();
+        var passwordConfirmCheck=$('#passwordvConfirm').val();
+
+        if(!nameCheck) {
+            result=false;
+            $('#nameError').html('Name is missing!');
+        }
+        else {
+            $('#nameError').html('');
+        }
+
+        if(!emailCheck) {
+            result=false;
+            $('#emailError').html('E-mail is missing!');
+        }
+        else if(reGmail.test(emailCheck)) {
+            result=false;
+            $('#emailError').html('Gmail is not allowed!');
+        }
+        else if(reYahoo.test(emailCheck)) {
+            result=false;
+            $('#emailError').html('Yahoo is not allowed!');
+        }
+        else {
+            $('#emailError').html('');
+        }
+
+        if(!compDetailsCheck) {
+            result=false;
+            $('#compDetailsError').html('Company Details is missing!');
+        }
+        else {
+            $('#compDetailsError').html('');
+        }
+
+        if(!passwordCheck) {
+            result=false;
+            $('#passwordError').html('Password is missing!');
+        }
+        else {
+            $('#passwordError').html('');
+        }
+
+        if(passwordCheck != passwordConfirmCheck) {
+            result=false;
+            $('#passwordError2').html('The passwords do not match!');
+        }
+        else {
+            $('#passwordError2').html('');
+        }
+
+        if(result == true) {
+            $('#btn').removeAttr('disabled');
+            $('#btn').css("cursor", "");
+            alert('Everything ok, you may now press the submit button!');
+        }
+        }
+        </script>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+    </script> -->
+<script>
+  function activatePlacesSearch()
+  {
+
+var input= document.getElementById('search_term');
+var autocomplete = new google.maps.places.Autocomplete(input);
+}
+</script>
+
+<script type="text/javascript" src="js/imageuploadify.min.js"></script>
+<script>
+function readURL(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah2')
+                    .attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+
+        }
+    }  
+
+
+  </script>

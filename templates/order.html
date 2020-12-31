@@ -1,0 +1,168 @@
+<style>
+    .sidebar-nav .nav li:first-child{
+        margin-top: 15%;
+    }
+    .dataTables_wrapper{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+
+    .svg{
+        fill: none;
+    }
+
+
+
+</style>
+<style>
+.buttons-excel{
+    background: url(../images/xl.png) !important;
+    background-size: 30px !important;
+    padding-top:17px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    margin-bottom: 7px !important;
+    background-color: #ffffff !important;
+    border: white !important;
+    -webkit-text-fill-color: rgba(236, 228, 228, 0.09) !important; 
+}
+.buttons-pdf{
+    background: url(../images/pdf1.png) !important;
+    background-size: 30px !important;
+    padding-top:17px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    margin-bottom: 7px !important; 
+    background-color: #ffffff !important;
+    border: white !important;
+    -webkit-text-fill-color: rgba(236, 228, 228, 0.09)!important; 
+}
+.buttons-copy{
+    background: url(../images/cp.png) !important;
+    background-size: 34px !important;
+    padding-top:17px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important; 
+    margin-bottom: 7px !important;
+    background-color: #ffffff !important;
+    border: white !important;
+    -webkit-text-fill-color: rgba(236, 228, 228, 0.09) !important; 
+}
+
+</style>
+
+
+
+<main class="main">
+    <ol class="breadcrumb">
+        
+            
+        <li class="breadcrumb-menu d-md-down-none">
+            <div class="btn-group" role="group" aria-label="Button group">
+                <!-- <a class="btn" href="#">
+                    <i class="icon-speech"></i>
+                </a>
+                <a class="btn" href="./"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+                <a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a> -->
+            </div>
+        </li>
+    </ol>
+        
+   <div class="container-fluid" style="background-color: #f6f7f8">
+        <div id="ui-view">
+             <div>
+                <div class="animated fadeIn" style="background-color: #f6f7f8;margin-top: 15px">
+                    <div class="animated fadeIn">
+                        <div class="card-group mb-3">
+
+                            <div class="col-sm-12">   
+                                <h4 style="text-align: center;color: #960909;"></h4>       
+                            </div>
+                            
+                            <div class="col-sm-3">
+                              <span class="padd nleft">From</span> 
+
+                             <select id="name" name="parent_selection" ng-modal="name" required="" style="width: 296px;height: 35px; border-radius: 8px;">
+                               <option value="NewOrder" >New Order</option>
+                                <option  value="RunningOrder" >Running Order</option>
+                                <option value="CompletOrder">Completed Order</option>
+                                <option value="CancelOrder">Canceled Order</option>
+
+            </select>
+
+
+                             
+                            </div>
+                           
+                              <div class="col-sm-3" style="margin-top: 17px;margin-left: 20px;">
+                                <input class="pay_go" data-disable-with="go" name="commit" ng-click="orderInfo()" type="submit" style="
+              background-color: #e9602a;
+              border : none;
+              padding: 5px 28px;
+             text-align: center;
+             text-decoration: none;
+             display: inline-block;
+             font-size: 16px;
+            color: #FFF;
+           margin: 4px 2px;
+          cursor: pointer;
+          -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+          border-radius: 6px;" value="go" >
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+            <div class="animated fadeIn">
+                
+                <div class="card">
+                    <div class="card-header" style="background-color: white">
+                        <i class="fa fa-edit"></i>Total Order List
+                        <div class="card-header-actions">
+                            <a class="card-header-action" href="#" target="_blank"><small class="text-muted"></small></a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer" id="DataTables_Table_0_wrapper">
+                            <div class="row">
+                                <div class="col-sm-12" id="runningOrdersTable">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main> 
+
+
+<!-- <script src="/js/bootstrap.min.js"></script> -->
+<!-- <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+    </script>
+
+ -->

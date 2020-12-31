@@ -1,0 +1,386 @@
+<script>
+    $( function() {
+        $( ".date-picker" ).datepicker();
+    } );
+</script>
+<style>
+
+<style>
+    .sidebar-nav .nav li:first-child{
+        margin-top: 15%;
+    }
+    .dataTables_wrapper{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+
+    .svg{
+        fill: none;
+    }
+
+
+
+</style>
+<style>
+.buttons-excel{
+    background: url(../images/xl.png) !important;
+    background-size: 30px !important;
+    padding-top:17px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    margin-bottom: 7px !important;
+    background-color: #ffffff !important;
+    border: white !important;
+    -webkit-text-fill-color: rgba(236, 228, 228, 0.09) !important; 
+}
+.buttons-pdf{
+    background: url(../images/pdf1.png) !important;
+    background-size: 30px !important;
+    padding-top:17px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    margin-bottom: 7px !important; 
+    background-color: #ffffff !important;
+    border: white !important;
+    -webkit-text-fill-color: rgba(236, 228, 228, 0.09)!important; 
+}
+.buttons-copy{
+    background: url(../images/cp.png) !important;
+    background-size: 34px !important;
+    padding-top:17px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important; 
+    margin-bottom: 7px !important;
+    background-color: #ffffff !important;
+    border: white !important;
+    -webkit-text-fill-color: rgba(236, 228, 228, 0.09) !important; 
+}
+.main{
+        margin-left: 0px !important;
+    }
+    .app-footer{
+        margin-left: 0px !important;
+    }
+    .option.active {
+        color: #006bd3;
+    }
+    .option {
+        font-size: inherit;
+        line-height: 9px;
+        font-weight: inherit;
+        position: relative;
+        text-transform: uppercase;
+        padding: 5px;
+        background: rgba(0,0,0,0);
+        border-color: rgba(0,0,0,0);
+        outline: none;
+    }
+    .list-group-item:hover{
+        cursor: pointer;
+    }
+    .list-group-item-action:hover .badge-secondary{
+        background-color: #f0f3f5;
+    }
+    .badge-secondary{
+        background-color: white;
+    }
+    .tick {
+        float: left;
+        display: inline-block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        z-index: 20;
+        background: url(/images/sprite.png) -175px -73px no-repeat;
+        background-color: #dedede;
+        border-radius: 20px;
+        -webkit-transition: background-color 25ms linear;
+        -moz-transition: background-color 25ms linear;
+        transition: background-color 25ms linear;
+    }
+    .checked .tick {
+        background: url(/images/sprite.png) -158px -73px no-repeat;
+        background-color: #0070dd;
+        -webkit-transition: background-color 25ms linear;
+        -moz-transition: background-color 25ms linear;
+        transition: background-color 25ms linear;
+        box-shadow: none;
+        border: none;
+    }
+
+
+    .counter {
+        padding: 4px 7px;
+        border-radius: 3px;
+        background: #EEE;
+        color: #888;
+        margin: 0 6px;
+        font-size: 12px;
+        line-height: 12px;
+        position: relative;
+        top: -1px;
+    }
+    .variable-wrapper-empty {
+        top: 29%;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        text-transform: none;
+        color: #888;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 300;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+    .variable-wrapper-empty:after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 40px;
+        background: url(/images/sprite.png) -64px -190px no-repeat;
+        left: 45%;
+        left: calc(50% - 30px);
+        position: relative;
+        opacity: 0.5;
+        margin-top: 20px;
+    }
+    .animated .row .col-md-4 .card{
+        height: 500px;
+    }
+    .m-body{
+        overflow: hidden;
+        overflow-y: scroll;
+        padding: 0px;
+    }
+    .m-body::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    .m-body::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 10px;
+    }
+    
+    /* Handle */
+    .m-body::-webkit-scrollbar-thumb {
+        background: blue; 
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    .m-body::-webkit-scrollbar-thumb:hover {
+        background: rgb(2, 2, 129); 
+    }
+    .remove {
+        background: url(/images/sprite.png) -157px -138px no-repeat;
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        position: relative;
+        cursor: pointer;
+        margin-right: 10px;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    input.ng-invalid {
+        background-color:#e0d8da;
+    }
+    
+
+</style>
+<style>
+    .sidebar-nav .nav li:first-child{
+        margin-top: 15%;
+    }
+    .dataTables_wrapper{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+
+    .svg{
+        fill: none;
+    }
+
+
+
+</style>
+<style>
+    .sidebar-nav .nav li:first-child{
+        margin-top: 15%;
+    }
+    .dataTables_wrapper{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+</style>
+<style>
+    .sidebar-nav .nav li:first-child{
+        margin-top: 15%;
+    }
+    .dataTables_wrapper{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+</style>
+
+
+
+
+
+
+<main class="main" data-select2-id="13">
+    <ol class="breadcrumb">
+
+
+        
+        <li class="breadcrumb-menu d-md-down-none">
+            <div class="col-sm-12" style="margin-left: -161px ! important; ">
+                                <a class="w3-btn" href="/#!/main/menu" style="float: right;background: #e9602a; border: none;color: white;padding: 5px 23px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 10px;">Back</a>
+                            </div>
+        </li>
+        
+    </ol>
+    
+    <div class="container-fluid">
+        <div data-select2-id="ui-view" id="ui-view">
+            <div>
+                <div class="animated fadeIn" style="margin-left:251px;margin-right:-251px; 
+                   ">
+                   <!-- background-image: url(images/gradient.png);color:#ffff; -->
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+                            <div class="panel panel-info" style="margin-left:50px;">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"></h3>
+                                </div>
+
+                                <div class="row">
+  <div class="col-sm-4" ><img src="{{image}}" alt="Smiley face" style=" height: 130px;width:150px;" ></div>
+  <div class="col-sm-4" style="" ><table class="table table-user-information" style=" width: 290px; margin-left: 2px;
+   ">
+                                            <tbody>
+                                              <tr>
+                                                <td>ItemId:</td>
+                                                <td>{{itemId}}</td>
+                                              </tr>
+                                              <tr>
+                                               <td>Quantity:</td>
+                                                <td>{{quantity}}</td>
+                                              </tr>
+                                             
+                                           
+                                                 <tr>
+                                                    
+
+                                          </div>
+</div>
+
+  <div class="col-sm-4"><table class="table table-user-information" style=" width: 290px;    margin-left: 343px;
+    margin-top: -106px; ">
+                                            <tbody>
+                                             
+                                              <tr>
+                                               <td>FoodItem:</td>
+                                                <td>{{food_item}}</td>
+                                              </tr>
+                                             <tr>
+                                            <td>Type:</td>
+                                              <td>{{pType}}</td>
+                                                
+                                              
+                                                </td>
+                                                   
+                                              </tr>
+                                                                                   </tr>
+
+
+                                         </tbody>
+                                          </table>
+
+                                          </div>
+</div>
+
+
+
+
+
+
+   
+                              
+
+                                <div class="panel-body">
+
+                                    <div class="row">
+                                        
+
+
+                                       
+                                              
+                                              <!-- <a href="#" class="btn btn-primary">Team Sales Performance</a> -->
+                                            </div>
+                                          </div>
+             
+                                      
+                    <!-- <div class="card-body">
+                        <div class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer" id="DataTables_Table_0_wrapper">
+                            <div class="row">
+                                <div class="col-sm-12" id="runningOrdersTable">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+<!-- <script src="/js/bootstrap.min.js"></script> -->
+<!-- <script src="js/jquery.min.js"></script> -->
+ 
+
+  
+  <!-- <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+    </script> -->
+
+

@@ -1,0 +1,410 @@
+
+<style>
+      .sidebar-nav .nav li:first-child{
+        margin-top: 15%;
+    }
+    .dataTables_wrapper{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+
+    .svg{
+        fill: none;
+    }
+
+.email-signup-thankyou{
+  font-family:sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  /*background: #333;*/
+  /*padding:10%;*/
+  }
+  .content{
+    margin: auto !important;  /* Magic! */
+    max-width:705px !important;
+    color:#333 !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.55), 0 3px 6px rgba(0,0,0,0.23) !important;
+    background:url('https://www.crafta.co.il/images/paper-plane.gif') no-repeat #fff !important;
+    background-position: right 5px bottom 5px !important;
+    background-size: 10em !important;
+    text-align:center !important;
+    position: relative !important;
+    padding:10% !important;
+    border-radius:5px !important;
+    }
+    .left-hole,.right-hole{
+      position: absolute !important;
+      width:20px; height:20px !important;
+      background:#333 !important;
+      border-radius:50% !important;
+      top:15px !important;
+    }
+    .left-hole{
+      left:15px !important;
+      top:10px !important;
+    }
+    .right-hole{
+      right:15px !important;
+      top:10px !important;
+    }
+    .main-content h1 {
+        color:#333;
+        text-transform:uppercase;
+        margin-top:-2%;
+        font-size:2.5em;
+        font-weight:900;
+      }
+      @media only screen and (min-width: 1200px){
+    .banner-btmg1, .w3layouts-reg-form {
+     width: 38.33%; 
+}
+}
+.vertical-center {
+  margin: 0 ! important;
+ /* position: absolute ! important;*/
+  top: 50% ! important;
+  -ms-transform: translateY(-50%) ! important;
+  transform: translateY(-378%) ! important;
+  color: #fff;"
+}
+
+
+
+
+
+
+  </style>    
+
+
+
+
+
+<main class="main ng-scope">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-menu d-md-down-none">
+           
+
+            <div class="col-sm-12" style="margin-left: -94px ! important; ">
+                                <a class="w3-btn" href="/#!/main/partner" style="float: right;background: #e9602a; border: none;color: white;padding: 5px 23px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 10px;">List</a>
+                            </div>
+        </li>
+    </ol>
+    <div class="container-fluid">
+        <div class="col-lg-12 col-sm-12 col-xs-12 &gt; &lt;strong class="></div>
+        <div data-select2-id="ui-view" id="ui-view">
+            <div>
+                <div class="animated fadeIn">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12" style="margin-right: 32px;">
+                            <div class="card card-accent-info">
+                                <div class="card-header" style="text-align:center;color:red;font-size:18px;">
+                                    Add Vendor
+                                </div>
+                               <form class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern" enctype="multipart/form-data" id="basicempdetails" name="basicempdetails" role="form" ng-show="servce_form" >
+                                    <hr>
+                                    <br>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="md-person-add"></i></span>
+                                        <div class="col-sm-4" style="padding-left:30px;">
+                                            <div class="fg-line" style="width:90%;">
+                                                <input class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" ng-model="firstName" placeholder="First Name" required="" style="height:35px;padding-left:14px;" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4" style="padding-left:30px;">
+                                            <div class="fg-line" style="width:90%;">
+                                                <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Middle Name" ng-model="middleName" required="" style="height:35px;padding-left:12px;" type="text">
+                                            </div>
+                                        </div>
+                                       <div class="col-sm-4" style="padding-left:25px;">
+                                            <div class="fg-line" style="width:90%;">
+                                                <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Last Name"  ng-model="lastName" required="" style="height:35px;padding-left:15px;" type="text">
+                                            </div>
+                                        </div>
+                                    </div><br>
+                                    <br>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="md md-person"></i></span>
+                                         <div class="col-sm-4" style="padding-left:32px;">
+                                            <div class="fg-line" style="width:90%;">
+                                                <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" id="datetimepicker" ng-model="dob" placeholder="Date Of Birth" style="width:100%;height:34px;" type="text" value=""> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div><br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <p class="c-black f-500 m-b-5 m-t-20" style="text-align:center;color:red;font-size:18px;">Working Timing</p>
+                                    <hr>
+                                    <br>
+                                    
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="md md-person"></i></span>
+                                        <div class="col-sm-4" style="padding-left:25px;">
+                                            <div class="fg-line" style="width:90%;">
+                                                 <label class="spce" for="OpenTime">OpenTime</label>
+ 
+                                                <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" id="openTime" ng-model="openTime" placeholder="Open Time" required="" style="width:100%;height:34px;" type="time" value=""> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4" style="padding-left:32px;">
+                                            <div class="fg-line" style="width:90%;">
+                                                <label class="spce" for="CloseTime">CloseTime</label>
+                                                <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" id="endTime" placeholder="End Time" ng-model="endTime" required="" style="width:100%;height:34px;" type="time" value=""> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4" style="padding-left:32px;">
+                                            <div class="fg-line" style="width:90%;">
+                                                <label class="spce" for="BreakStart">BreakStart</label>
+                                                <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" id="breakStart" placeholder="Break Start" ng-model="breakStart" style="width:100%;height:34px;" type="time" value=""> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                            </div>
+                                        </div>
+                                    </div><br>
+                                    <br>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="md md-person"></i></span>
+                                        <div class="col-sm-4" style="padding-left:25px;">
+                                            <div class="fg-line" style="width:90%;">
+                                                <label class="spce"  for="BreakEnd">BreakEnd</label>
+                                                <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Break End"  id="breakEnd" ng-model="breakEnd" required="" style="height:35px;padding-left:15px;" type="time">
+                                            </div>
+                                        </div>
+                                    </div><br>
+                                    <br>
+                                    <p class="c-black f-500 m-b-5 m-t-20" style="text-align:center;color:red;font-size:18px;">CONTACT INFORMATION</p>
+                                    <hr>
+                                    <br>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="md md-person"></i></span>
+                                        <div class="col-sm-4" style="padding-left:25px;">
+                                            <div class="fg-line" style="width:100%">
+                                                <input class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" placeholder="Country" required="" ng-model="country" style="height:35px;padding-left:15px;" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="fg-line">
+                                                <input class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" placeholder="State" ng-model="state" required="" style="height:35px;padding-left:15px;" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="fg-line">
+                                                <input class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" placeholder="address" ng-model="address" required="" style="height:35px;padding-left:15px;" type="text">
+                                            </div>
+                                        </div>
+                                    </div><br>
+                                    <br>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="md md-phone"></i></span>
+                                        <div class="col-sm-4" style="padding-left:25px;">
+                                            <div class="fg-line">
+                                                <input class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" placeholder="Zipcode" ng-model="zipCode" required="" style="height:35px;padding-left:15px;" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="fg-line" style="width:100%">
+                                                <input autocomplete="off" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern" onkeyup="validateInputs();" placeholder="xxx@xx.com" required="" id="email"  ng-model="email" style="height:35px;padding-left:15px;" value=email type="email">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="fg-line">
+                                                <input class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" maxlength="10" placeholder="Phone No" required="" ng-model="mobile" style="height:35px;padding-left:15px;" type="tel">
+                                            </div>
+                                        </div>
+                                    </div><br>
+                                    <br>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="md md-phone"></i></span>
+                                        <div class="col-sm-4" style="padding-left:25px;">
+                                            <div class="fg-line" style="width:100%">
+                                                <input class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" placeholder="Food License No" required="" ng-model="foodLicenseNo" style="height:35px;padding-left:15px;" type="text">
+                                            </div>
+                                        </div>
+                                    </div><br>
+                                    <br>
+                                    <p class="c-black f-500 m-b-5 m-t-20" style="text-align:center;color:red;font-size: 18px;">SPECIALIZATION IN COOKING:*</p>
+                                    <hr>
+                                    <br>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="md md-phone"></i></span>
+                                        <div class="col-sm-6" style="padding-left:150px;">
+                                            <div class="fg-line" style="width:90%;">
+                                                <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Enter" required="" ng-model="specialization" style="height:35px;padding-left:15px;" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6" style="padding-right:150px;">
+                                            <div class="fg-line" style="width:90%;">
+                                                <input class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Enter Comments" required="" ng-model="comment" style="height:35px;padding-left:15px;" type="text">
+                                            </div>
+                                        </div>
+                                    </div><!--  -->
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <p class="c-black f-500 m-b-5 m-t-20" style="text-align:center;color:red;font-size: 18px;">Signature</p>
+                                    <hr>
+                                    <br>
+                                    <div class="ch-form-element input-label" style="padding-left:370px;padding-right:370px">
+                                        <label class="custom-file-upload" for="file-upload"><!-- <i class="fa fa-camera"></i> -->
+                                         Mom's Signature</label> <input id="file-upload" onchange="readURL(this);" required="" style="margin-top: 12px;" ng-model="image" type="file">
+                                    </div><br>
+                                    <br>
+                                    <div class="input-group">
+                                        <div class="col-sm-12" style="padding-bottom:100px;padding-left:445px;">
+                                            <button class="btn btn-primary btn-sm m-t-10 waves-effect waves-button waves-float" style="width: 120px; height: 40px;border-radius: 10px;font-size: 17px;" ng-click="AddVendor()" type="submit">Submit</button>
+                                        </div>
+                                    </div>
+
+
+
+                                </form>
+                                <form class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern" enctype="multipart/form-data" id="basicempdetails" name="basicempdetails" role="form" ng-show="contact_submit" >
+                                    <hr>
+                                    <br>
+                                    <div class="col-md-12 w3layouts-reg-form contact-form-row-agileinfo" style="margin-left: 334px;">
+                                        <div class="content">
+                                            <div class="left-hole"></div>
+                                            <div class="right-hole"></div>
+                                            <div class="main-content">
+                                                <h1>Success! Thank You</h1><!-- <ul> -->
+                                                <p>Thank you for submitting you information, it means a lot to us, just like you do! We really appreciate you giving us a moment of your time.</p>
+                                                <p>One Click Food Service.</p><!-- </ul> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                           
+          
+          </div><br>
+        </div>
+                    
+                    <script>
+
+                    $('#datetimepicker').datetimepicker({format: 'd/m/Y'
+                    });
+                    $('#datetimepicker3').datetimepicker({format: 'd/m/Y'
+                    });
+                    $('#datetimepicker2').datetimepicker({format: 'd/m/Y'
+                    });
+
+
+                    $('.dropdown-el').click(function(e) {
+                       e.preventDefault();
+                       e.stopPropagation();
+                       $(this).toggleClass('expanded');
+                       $('#'+$(e.target).attr('for')).prop('checked',true);
+                    });
+
+
+                    </script> 
+                    <script>
+                    function regExpGmail() {
+                    return RegExp(/([a-zA-Z0-9]+)([\.{1}])?([a-zA-Z0-9]+)\@gmail([\.])com/g);
+                    }
+
+                    function regExpYahoo() {
+                    return RegExp(/^[^@]+@(yahoo|ymail|rocketmail)\.(com|in|co\.uk)$/i);
+                    }
+
+                    function validateInputs() {
+                    reGmail=regExpGmail();
+                    reYahoo=regExpYahoo();
+
+                    var result = true;
+
+                    var nameCheck=$('#nameField').val();
+                    var emailCheck=$('#emailField').val();
+                    var compDetailsCheck=$('#compDetailsField').val();
+                    var passwordCheck=$('#passwordvz').val();
+                    var passwordConfirmCheck=$('#passwordvConfirm').val();
+
+                    if(!nameCheck) {
+                       result=false;
+                       $('#nameError').html('Name is missing!');
+                    }
+                    else {
+                       $('#nameError').html('');
+                    }
+
+                    if(!emailCheck) {
+                       result=false;
+                       $('#emailError').html('E-mail is missing!');
+                    }
+                    else if(reGmail.test(emailCheck)) {
+                       result=false;
+                       $('#emailError').html('Gmail is not allowed!');
+                    }
+                    else if(reYahoo.test(emailCheck)) {
+                       result=false;
+                       $('#emailError').html('Yahoo is not allowed!');
+                    }
+                    else {
+                       $('#emailError').html('');
+                    }
+
+                    if(!compDetailsCheck) {
+                       result=false;
+                       $('#compDetailsError').html('Company Details is missing!');
+                    }
+                    else {
+                       $('#compDetailsError').html('');
+                    }
+
+                    if(!passwordCheck) {
+                       result=false;
+                       $('#passwordError').html('Password is missing!');
+                    }
+                    else {
+                       $('#passwordError').html('');
+                    }
+
+                    if(passwordCheck != passwordConfirmCheck) {
+                       result=false;
+                       $('#passwordError2').html('The passwords do not match!');
+                    }
+                    else {
+                       $('#passwordError2').html('');
+                    }
+
+                    if(result == true) {
+                       $('#btn').removeAttr('disabled');
+                       $('#btn').css("cursor", "");
+                       alert('Everything ok, you may now press the submit button!');
+                    }
+                    }
+                    </script> 
+                    <script type="text/javascript">
+                    $('#time').bootstrapMaterialDatePicker({ date: false });
+
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+    </script> -->

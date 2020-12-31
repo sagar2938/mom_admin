@@ -1,0 +1,321 @@
+<!-- <div class="sidebar ng-scope">
+    <nav class="side-nav">
+        <ul class="nav nav-pills nav-stacked">
+         
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="main.home" href="#!/main/home"><i class="nav-icon icon-home"></i> Dashboard</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="main.list_view" href="#!/main/list-view">
+                <i class="nav-icon icon-bar-chart"></i> App Attendance</a>
+            </li>
+                   
+           
+           <li class="nav-item ">
+                 <a class="nav-link" ui-sref="main.designation" href="#!/main/designation">
+                    <i class="nav-icon icon-list"></i> Designation list
+                </a>
+
+            </li>
+            <li class="nav-item">
+                 <a class="nav-link active" ui-sref="main.reports" href="#!/main/reports">
+                    <i class="nav-icon icon-user"></i> Add Employee Data
+                </a>
+
+            </li>
+
+           
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="main.user" href="#!/main/user">
+                <i class="nav-icon icon-bar-chart"></i>Users Detail </a>
+            </li>
+                    
+            
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="main.leave" href="#!/main/leave"><i class="nav-icon icon-bar-chart"></i> Leave Details </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="main.mapReport" href="#!/main/mapReport"><i class="nav-icon icon-share"></i> Reports </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" ui-sref="main.notification" href="#!/main/notification"><i class="nav-icon icon-envelope"></i> Notification </a>
+            </li>
+           
+
+        </ul>
+       
+    </nav> -->
+    <!-- <div>
+        <a class="nav-link" ui-sref="main.company"> {{od}} </a>
+    </div> -->
+    <!-- <div style="text-align: center;">
+    <button type="button"></button></div> -->
+</div>      
+
+<main class="main ng-scope">
+    <ol class="breadcrumb">
+        <!-- <li class="breadcrumb-item">Dashboard</li>
+        <li class="breadcrumb-item active">Add Employee</li> -->
+
+            
+        <li class="breadcrumb-menu d-md-down-none">
+            
+
+            <div class="col-sm-12" style="margin-left: -94px ! important; ">
+                                <a class="w3-btn" ui-sref="main.list" style="float: right;background: #e9602a; border: none;color: white;padding: 5px 23px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 10px;">List</a>
+                            </div>
+        </li>
+    </ol>    
+    <div class="container-fluid">
+       <div class="col-lg-12 col-sm-12 col-xs-12 alert alert-success ng-hide" ng-show="alertshow ">
+        <strong class="ng-binding"></strong>
+    </div> 
+
+<div data-select2-id="ui-view" id="ui-view">
+            <div>
+                <div class="animated fadeIn">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12" style=" margin-left: -89px;margin-right: 32px;">
+                            <div class="card card-accent-info">
+                                <div class="card-header" style="text-align:center;color:red;font-size:18px;">
+                                    Add Menu
+                                </div>
+
+       <!--  <form role="form" ng-submit="basicInput()" name="basicempdetails" enctype="multipart/form-data"> -->
+        <form role="form" ng-submit="basicInput()" name="basicempdetails" enctype="multipart/form-data" class="ng-pristine ng-invalid ng-invalid-required ng-valid-pattern">
+        <hr>
+        
+ 
+
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="md-person-add"></i></span>
+            <div class="col-sm-4" style="padding-left:25px;">
+                
+                <div class="fg-line select starval" style="width:90%;">    
+                    <select class="form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched" autofocus="" ng-model="food_type" required style="padding-left:12px;padding-right:12px">
+                        <option value="" selected="selected">Food Type</option>
+                        <option value="Veg">Veg </option>
+                        <option value="Non Veg">Non Veg</option>
+                        
+                    </select>
+                </div>
+            </div>
+            
+            <div class="col-sm-4" style="padding-left:30px;">
+                
+                <div class="fg-line" style="width:90%;">    
+                    <input type="text"  class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" placeholder="Item Name" required  ng-model="itemName"  style="height:35px;
+                    padding-left:14px;">
+                </div>
+            </div>
+            <div class="col-sm-4" style="padding-left:30px;">
+                <div class="fg-line" style="width:90%;">    
+                    <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Item Description" required ng-model="itemDescription"  style="height:35px;padding-left:12px;">
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="input-group">
+            <span class="input-group-addon"><i class="md md-person"></i></span>
+            <div class="col-sm-4" style="padding-left:25px;">
+                 <div class="fg-line select starval" style="width:90%;">
+              <select class="form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched" autofocus="" ng-model="itemGroup" required style="padding-left:12px;padding-right:12px">
+                        <option value="" selected="selected">Item Group</option>
+                        <option value="starter">Starter </option>
+                        <option value="main course">Main Course</option>
+                        
+                    </select>
+            </div>
+        </div>
+            <div class="col-sm-4" style="padding-left:32px;">
+                
+                
+                <div class="fg-line" style="width:90%;">    
+                    <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Full Price" required ng-model="fullPrice"  style="height:35px;padding-left:12px;">
+                </div>
+            </div>
+
+             <div class="col-sm-4" style="padding-left:32px;">
+                
+                
+                <div class="fg-line" style="width:90%;">    
+                    
+                <input class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" maxlength="10" placeholder="Phone No" required="" ng-model="mobile" style="height:35px;padding-left:15px;" type="int">
+                </div>
+            </div>
+            
+       
+
+        <div class="col-sm-4" style="padding-left:32px;">
+                
+                 <div class="fg-line select starval" style="width:90%;">    
+                    <!-- <select class="form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched" autofocus="" ng-model="vendorname" required="" style="padding-left:12px;padding-right:12px">
+                        <option value="" selected="selected">Select Vendor</option>
+                        <option value="mr">Vendor1 </option>
+                        <option value="mrs">Vendor2 </option>
+                        <option value="ms">Vendor3 </option>
+                    </select> -->
+                    <!-- <select class="form-control zptxt-edit"  id="listBox"   onchange='selct_vendor(this.value)' ng-model='vendorlist' value=""></select> -->
+
+                    <!-- <select id="category" name="parent_selection" ng-model="category"  ng-change="modelType()" required>
+                            <option value="" selected="selected">Select Vendor</option><option ng-repeat="list in list" value="{{list.mobile}}">{{list.name}}</option>
+
+                    </select> -->
+                </div>
+            </div> 
+        </div>
+
+
+        <br><br>
+
+ 
+        
+        
+         
+        
+        
+        
+        <p class="c-black f-500 m-b-5 m-t-20" style="text-align:center;color:red;font-size: 18px;">Menu Item Upload</p>
+        <hr>
+
+        <br>
+      
+     
+                    <div class="ch-form-element input-label" style="padding-left:370px;padding-right:370px">
+                                     <label class="custom-file-upload" for="file-upload" >
+                                      <!-- <i class="fa fa-camera"></i> -->
+                                       Upload Menu
+                                     </label> <input id="file-upload" type="file" onchange="readURL(this);" required ng-model="image" custom-on-change="uploadFile" style="margin-top: 12px;
+">
+                                </div>
+    
+       
+
+        <br>
+        <br>
+         <div class="input-group">
+            <div class="col-sm-12" style="padding-bottom:100px;padding-left:445px;">
+                <button type="submit" class="btn btn-primary btn-sm m-t-10 waves-effect waves-button waves-float" style="width: 120px; height: 40px;border-radius: 10px;font-size: 17px; " ng-click="createmenu()">Submit</button>
+            </div>
+        </div>
+
+        </form>
+
+    </div>
+
+    <br>
+</div>
+
+
+<script>
+   
+    $('#datetimepicker').datetimepicker({format: 'd/m/Y'
+ });
+    $('#datetimepicker3').datetimepicker({format: 'd/m/Y'
+ });
+    $('#datetimepicker2').datetimepicker({format: 'd/m/Y'
+ });
+    
+    
+    $('.dropdown-el').click(function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(this).toggleClass('expanded');
+        $('#'+$(e.target).attr('for')).prop('checked',true);
+    });
+
+    
+</script>
+<script>
+function regExpGmail() {
+    return RegExp(/([a-zA-Z0-9]+)([\.{1}])?([a-zA-Z0-9]+)\@gmail([\.])com/g);
+}
+
+function regExpYahoo() {
+    return RegExp(/^[^@]+@(yahoo|ymail|rocketmail)\.(com|in|co\.uk)$/i);
+}
+
+function validateInputs() {
+    reGmail=regExpGmail();
+    reYahoo=regExpYahoo();
+
+    var result = true;
+
+    var nameCheck=$('#nameField').val();
+    var emailCheck=$('#emailField').val();
+    var compDetailsCheck=$('#compDetailsField').val();
+    var passwordCheck=$('#passwordvz').val();
+    var passwordConfirmCheck=$('#passwordvConfirm').val();
+
+    if(!nameCheck) {
+        result=false;
+        $('#nameError').html('Name is missing!');
+    }
+    else {
+        $('#nameError').html('');
+    }
+
+    if(!emailCheck) {
+        result=false;
+        $('#emailError').html('E-mail is missing!');
+    }
+    else if(reGmail.test(emailCheck)) {
+        result=false;
+        $('#emailError').html('Gmail is not allowed!');
+    }
+    else if(reYahoo.test(emailCheck)) {
+        result=false;
+        $('#emailError').html('Yahoo is not allowed!');
+    }
+    else {
+        $('#emailError').html('');
+    }
+
+    if(!compDetailsCheck) {
+        result=false;
+        $('#compDetailsError').html('Company Details is missing!');
+    }
+    else {
+        $('#compDetailsError').html('');
+    }
+
+    if(!passwordCheck) {
+        result=false;
+        $('#passwordError').html('Password is missing!');
+    }
+    else {
+        $('#passwordError').html('');
+    }
+
+    if(passwordCheck != passwordConfirmCheck) {
+        result=false;
+        $('#passwordError2').html('The passwords do not match!');
+    }
+    else {
+        $('#passwordError2').html('');
+    }
+
+    if(result == true) {
+        $('#btn').removeAttr('disabled');
+        $('#btn').css("cursor", "");
+        alert('Everything ok, you may now press the submit button!');
+    }
+}
+</script>
+
+
+
+
+
+</div></div></div></div></div></main>
+
+
+
+
+
+

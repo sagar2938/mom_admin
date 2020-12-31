@@ -1,0 +1,234 @@
+<link rel="stylesheet" type="text/css" href="/css/report.css">
+<style>
+    .main{
+        margin-left: 0px !important;
+    }
+    .app-footer{
+        margin-left: 0px !important;
+    }
+    .option.active {
+        color: #006bd3;
+    }
+    .option {
+        font-size: inherit;
+        line-height: 9px;
+        font-weight: inherit;
+        position: relative;
+        text-transform: uppercase;
+        padding: 5px;
+        background: rgba(0,0,0,0);
+        border-color: rgba(0,0,0,0);
+        outline: none;
+        color: #006bd3
+    }
+    .list-group-item:hover{
+        cursor: pointer;
+    }
+    .list-group-item-action:hover .badge-secondary{
+        background-color: #f0f3f5;
+    }
+    .badge-secondary{
+        background-color: white;
+    }
+    .tick {
+        float: left;
+        display: inline-block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        z-index: 20;
+        background: url(/images/sprite.png) -175px -73px no-repeat;
+        background-color: #dedede;
+        border-radius: 20px;
+        -webkit-transition: background-color 25ms linear;
+        -moz-transition: background-color 25ms linear;
+        transition: background-color 25ms linear;
+    }
+    .checked .tick {
+        background: url(/images/sprite.png) -158px -73px no-repeat;
+        background-color: #0070dd;
+        -webkit-transition: background-color 25ms linear;
+        -moz-transition: background-color 25ms linear;
+        transition: background-color 25ms linear;
+        box-shadow: none;
+        border: none;
+    }
+    .counter {
+        padding: 4px 7px;
+        border-radius: 3px;
+        background: #fff;
+        color: #888;
+        margin: 0 6px;
+        font-size: 12px;
+        line-height: 12px;
+        position: relative;
+        top: -1px;
+    }
+    .variable-wrapper-empty {
+        top: 29%;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        text-transform: none;
+        color: #888;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 300;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+    .variable-wrapper-empty:after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 40px;
+        background: url(/images/sprite.png) -64px -190px no-repeat;
+        left: 45%;
+        left: calc(50% - 30px);
+        position: relative;
+        opacity: 0.5;
+        margin-top: 20px;
+    }
+    .animated .row .col-md-4 .card{
+        height: 500px;
+    }
+    .m-body{
+        overflow: hidden;
+        overflow-y: scroll;
+        padding: 0px;
+    }
+    .m-body::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    .m-body::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 10px;
+    }
+    #ui-datepicker-div
+    {
+        width:220px;
+    }
+    
+    /* Handle */
+    .m-body::-webkit-scrollbar-thumb {
+        background: blue; 
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    .m-body::-webkit-scrollbar-thumb:hover {
+        background: rgb(2, 2, 129); 
+    }
+    .remove {
+        background: url(/images/sprite.png) -157px -138px no-repeat;
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        position: relative;
+        cursor: pointer;
+        margin-right: 10px;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+    
+</style>
+<style> 
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            resize: none;
+        }
+    .back{
+        background-color: white;
+        padding: 40px;
+    }
+    .label1{
+        padding-top: 20px;
+    }
+</style>
+
+
+<main class="main">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"> <a href="#" ui-sref="main.home">Home</a></li>
+        
+    </ol>
+    
+    <div class="container-fluid">
+       
+         
+        <div data-select2-id="ui-view" id="ui-view" class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 w3-card back">
+                
+                <div class="card-body breadcrumb" >
+                    <div class="form-group row" style="padding-left:22px;padding-top:2px;width:100%;">
+                         <div class="col-sm-6">
+                            <div>
+                                <label for="country" class="zplt-label " >Email Id </label>
+                                <div class="controls">
+                                     <input id="id" class="form-control zptxt-edit" name="" placeholder="Enter Email id" type="text" value="" disabled="true">
+
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div>
+                                <label for="country" class="zplt-label">Name</label>
+                                <div class="zprt-label" >
+                                   <input class="form-control zptxt-edit" id="companyName" name="India" placeholder="Enter Name" type="text" value="">
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div>
+                                <label for="country" class="zplt-label label1">Mobile</label>
+                                   <div class="controls">
+                                       <input class="form-control zptxt-edit" id="email" name="India" placeholder="Enter Mobile" type="text" value="">
+                                    </div>
+                               
+                            </div>
+                        </div>
+                         <div class="col-sm-6">
+                            <div>
+                                <label for="country" class="zplt-label label1" >Address</label>
+                                <div class="controls">
+                                    <input class="form-control zptxt-edit" id="address" name="India" placeholder="Enter Address" type="text" value="">
+                                </div> 
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-3">
+                            <div>
+                                
+                                <div class="controls">
+                                    <button class="btn btn-secondary" type="button" style="color: white;margin-top: 28px;width: 120px;background-color: #3e7bc9;" ng-click="stateReport();">Update</button>
+
+                                </div> 
+                            </div>
+                        </div>
+                         
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+    
+        

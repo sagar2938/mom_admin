@@ -1,0 +1,193 @@
+
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
+<style type="text/css">
+body{
+    overflow: hidden;
+}
+
+    .highlight {
+     background: transparent !important; 
+     border: 0px solid #e0e0e0; 
+    overflow: hidden;
+    border-radius: 2px;
+    margin: 0 0 1.5em;
+}
+#bg_none .ui-autocomplete-multiple ul.ui-autocomplete-multiple-container li.ui-autocomplete-input-token textarea, input[type="text"], input[type="password"], select {
+    color: #4e88c7!important;
+    border: solid 0px #E7E7E8;
+     border-bottom: solid 1px #E7E7E8; 
+}
+#buttonSubmit{
+    width: 200px;
+    left: -20px;
+}
+
+
+@media screen and (max-width:465px){
+    .form_setup {
+    padding: 10px;
+}
+
+
+.login-page {
+    /* height: auto; */
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    /* margin-left: -200px; */
+    padding-top: 20px;
+    /* left: 56%; */
+    background-color: rgba(255, 255, 255, 0.20  );
+    border-radius: 21px;
+    text-align: center;
+    right: 0;
+    width: 340px;
+    margin: auto;
+     margin-top: -150px;
+}
+}
+
+
+@media screen and (max-width:364px){
+    .form_setup {
+    padding: 0px;}
+
+    input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 228px;
+    margin: auto;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background: transparent;
+}
+
+
+.markin{
+    left: 20px !important;
+    }
+
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width: 38%;
+}
+
+.login-page {
+        width: 279px;
+        
+    }
+}
+
+    #overlay {
+        position: fixed;
+        /* display: none; */
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #222b35;
+        z-index: 2;
+        cursor: pointer;
+        background-image: url("../images/cat.jpg");    
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 50px;
+        color: white;
+        transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+    }
+    #text .mui-select label, #text .mui-select select{
+        color: white !important;
+    }
+    #text .mui-select select{
+        width: 200px;
+        background-color: #4e88c7;
+        padding: 0 25px 0 25px;
+    }
+    #text .mui-select select option{
+        text-align: center;
+    }
+    .mui-select__menu > div:not(.mui-optgroup__label):not(.mui--is-disabled) {
+        background-color: #b9b3b3;
+    }
+    .mui-select__menu > div:not(.mui-optgroup__label):not(.mui--is-disabled):hover,.mui-select__menu > div.mui--is-selected{
+        background-color: #4e88c7;
+    }
+    .subBtn input{
+        border-bottom: 0px solid #ffffff !important;
+        background-color: white;
+        color: black;
+        border: 2px solid #555555;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    .subBtn input:hover{
+        background-color: #555555;
+        color: white;
+    }
+</style>
+
+
+
+<div class="bacgr_image sw-toggled': mactrl.layoutType === '1'" id="loginPage">
+    <div class="login-page">
+        <!-- logo image -->
+        <div class="log_ht"><img class="log_img" src="images/mom_logo.png"></div><!-- logo-image -->
+        <!-- login-form -->
+        <div style="text-align: center">
+            <span style="color: red; width: 100px;" ng-show="wrongpass">The password is incorrect !!</span>
+        </div>
+
+        <form class="form_setup" id="loginForm" method="post" name="loginForm" ng-submit="submitLogin(username, password)">
+            
+            <div>
+                <div class="group">
+                    <input type="text" id="email" ng-model="username" name="username" required> <span class="highlight"></span> <span class="bar"></span> 
+                    <label class="markin">Username</label>
+                </div>
+            </div>
+            <div>
+                <div class="group1">
+                    <input type="password" id="password" name="password" ng-model="password" required> <span class="highlight"></span> <span class="bar"></span> <label class="markin">Password</label>
+                </div>
+            </div>
+            
+            <div class="form-actions" id="buttonDiv">
+                <button type="submit" ng-disabled="form.$invalid || this.dataLoading"
+                    class="btn btn-primary" id="buttonSubmit">Login</button>
+                <!-- <img ng-if="this.dataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" /> -->
+            </div>
+            
+        </form>
+    </div>
+    <div class="section-footer" style="position: fixed;z-index: 4;bottom: 0;right: 0;left: 0;text-align: center;">
+        <div class="row footerInner" style=" margin-top:-79px;">
+            <!-- <div class="footer-logo"><img alt="" id="j_idt54" src="images/mtrack2.png" style="height:33px;margin-bottom:14px;"></div> -->
+            <div class="copy-right" style="color:#FFF;font-size:12px;">
+<!--                 <span class="poweredBy"></span> Copyright© 2018 <span></span>
+ -->            </div>
+        </div>
+    </div>
+</div>
+
+
+  

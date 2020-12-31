@@ -1,0 +1,211 @@
+<style type="text/css">
+	/* Chart.js */
+    @-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}
+</style>
+<style>
+    ui-view{
+        width: 100%;
+    }
+    .app-header{
+        padding: 0 30px;
+    }
+    .abhi-item {
+        color: #181b1e;
+        text-decoration: none;
+        background-color: #f0f3f5;
+    }
+</style>
+
+
+
+<div class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+    <header class="app-header navbar">
+        <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" data-toggle="sidebar-show" type="button"><span class="navbar-toggler-icon" ></span></button> <a class="navbar-brand" ui-sref="main.home" href="#"><img alt="CoreUI Logo" class="navbar-brand-full" height="40" src="images/mom_logo.png" width="120"> <img alt="CoreUI Logo" class="navbar-brand-minimized" height="30" src="images/brand/sygnet.svg" width="30"></a> <button class="navbar-toggler sidebar-toggler d-md-down-none" data-toggle="sidebar-lg-show" type="button"><span class="navbar-toggler-icon"></span></button>
+        <ul class="nav navbar-nav d-md-down-none">
+            <li class="nav-item px-3">
+                <a class="nav-link" href="#"></a>
+            </li>
+            
+            <!-- <li class="nav-item px-3">
+                <a class="nav-link" href="#">Users</a>
+            </li>
+            <li class="nav-item px-3">
+                <a class="nav-link" href="#">Settings</a>
+            </li> -->
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+            
+            
+
+
+            <li class="nav-item dropdown">
+                <a aria-expanded="false" aria-haspopup="true" href="" class="nav-link nav-link" data-toggle="dropdown" role="button"><img alt="admin@bootstrapmaster.com" class="img-avatar" src="images/avatars/img_avatar.png">ADMIN</a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header text-center">
+                        <strong>Account</strong>
+                    </div>
+                    <a class="dropdown-item" ui-sref="main.profile" href="#"><i class="fa fa-bell-o"></i> Profile  <span class="badge badge-info"></span></a>  
+                    <!-- <a class="dropdown-item" href="#"><i class="fa fa-envelope-o"></i> Messages <span class="badge badge-success"></span></a>  -->
+                    <a class="dropdown-item" ui-sref="main.password" href="#"><i class="fa fa-tasks"></i> Password Reset <span class="badge badge-danger"></span></a> 
+                    <a class="dropdown-item" ng-click="logout()" href="#"><i class="fa fa-lock"></i> Logout</a>
+
+                    <!-- <a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments <span class="badge badge-warning"></span></a> -->
+                    <!-- <div class="dropdown-header text-center">
+                        <strong>Settings</strong>
+                    </div> -->
+                    <!-- <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a> 
+                    <a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a> 
+                    <a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments <span class="badge badge-dark">42</span></a> 
+                    <a class="dropdown-item" href="#"><i class="fa fa-file"></i> Projects <span class="badge badge-primary">42</span></a> -->
+                    <!-- <div class="divider"></div>
+                    <a class="dropdown-item" href="#"><i class="fa fa-shield"></i> Lock Account</a> 
+                    <a class="dropdown-item" ng-click="logout()"><i class="fa fa-lock"></i> Logout</a> -->
+                </div>
+            </li>
+        </ul>
+        <!-- <button class="navbar-toggler aside-menu-toggler d-md-down-none" data-toggle="aside-menu-lg-show" type="button"><span class="navbar-toggler-icon"></span></button>  -->
+        <!-- <button class="navbar-toggler aside-menu-toggler d-lg-none" data-toggle="aside-menu-show" type="button"><span class="navbar-toggler-icon"></span></button> -->
+    </header>
+    <div class="app-body"> 
+        <div class="sidebar">
+    <nav class="side-nav">
+        <ul class="nav nav-pills nav-stacked">
+         
+            <li class="nav-item">
+                <a class="nav-link active" ui-sref="main.home"><i class="nav-icon icon-home"></i> Dashboard</a>
+            </li>
+            <li class="nav-item nav-dropdown" >
+                <a class="nav-link  dropdown-btn" ui-sref="main.approved">
+                    <i class="nav-icon icon-list"></i> User
+                </a>
+            </li>
+
+             <li class="nav-item nav-dropdown">
+                <a class="nav-link  dropdown-btn" ui-sref="main.deliveryreg">
+                    <i class="nav-icon icon-plus"></i>Delivery Boy
+                </a>
+            </li>
+             <li class="nav-item nav-dropdown" >
+                <a class="nav-link nav-dropdown-toggle dropdown-btn" href="">
+                    <i class="nav-icon icon-globe"></i>Manage Order
+                </a>
+                <ul class="dropdown-container" style="margin-top:-24px; margin-top:2px;background-color:#ffffff;">
+                    <li class="nav-item " style=" padding:2px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.neworder">
+                    <i class=""></i>New Order</a>
+                    </li>
+                    <li class="nav-item " style=" padding:2px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.completeorder">
+                    <i class=""></i>Complete Order</a>
+                    </li>
+
+                    <li class="nav-item " style=" padding:2px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.uassignorder">
+                    <i class=""></i>Unassigned Order</a>
+                    </li>
+
+                    <li class="nav-item " style=" padding:2px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.vendorwiseorder">
+                    <i class=""></i>Vendor Wise Order List</a>
+                    </li>
+                    <!-- <li class="nav-item" style="background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.cancel">
+                            <i class=""></i>Cancelled Order</a>
+                    </li> -->
+                    <!-- <li class="nav-item" style="background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.complte">
+                            <i class=""></i>Completed Order</a>
+                    </li> -->
+
+                </ul>
+
+            </li>
+            <li class="nav-item nav-dropdown" >
+                <a class="nav-link nav-dropdown-toggle dropdown-btn " href="">
+                    <i class="nav-icon icon-user"></i> Manage Mom Chef
+                </a>
+                <ul class="dropdown-container" style="margin-top:-24px; margin-top:2px;background-color:#ffffff;">
+                    <li class="nav-item" style=" padding:2px;background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.vendorprofile">
+                    <i class=""></i>Create profile </a>
+                    </li>
+                    <li class="nav-item" style="background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.home">
+                            <i class=""></i>Verify + KYC</a>
+                    </li>
+                    <li class="nav-item" style="background-color: #ffffff;">
+                        <a class="nav-link" ui-sref="main.partner">
+                            <i class=""></i>View details </a>
+                    </li>
+                  
+                </ul>
+
+            </li>
+            <li class="nav-item nav-dropdown" >
+                <a class="nav-link  dropdown-btn " ui-sref="main.list">
+                    <i class="nav-icon icon-globe"></i>Menu
+
+                </a>
+            </li>
+         
+            <li class="nav-item nav-dropdown" >
+                <a class="nav-link  dropdown-btn " ui-sref="main.subscribe">
+                    <i class="nav-icon icon-map"></i>Offers
+                </a>
+                
+            </li>
+
+
+            <li class="nav-item nav-dropdown" >
+                <a class="nav-link  dropdown-btn " ui-sref="main.price">
+                    <i class="nav-icon icon-credit-card"></i>Price Info
+                </a>
+            </li>
+        </ul>
+    </nav>
+   
+    <div style="text-align: center;">
+    <button type="button"></button></div>
+</div>
+        
+        <ui-view></ui-view>
+        
+    </div>
+    <footer class="app-footer">
+        <div>
+            <!-- <a href="#">Innobins</a> <span>© 2018 .</span> -->
+        </div>
+        <div class="ml-auto">
+<!--             <span>Powered by</span> <a href="#">Innobins</a>
+ -->        </div>
+    </footer>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('ul li a').click(function(){
+    $('li a').removeClass("active");
+    $(this).addClass("active");
+});
+});
+</script>
+
+<!-- <script src="/js/bootstrap.min.js"></script> -->
+<script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+    </script>
+
+

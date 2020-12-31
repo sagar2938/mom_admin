@@ -1,0 +1,216 @@
+<style>
+    .sidebar-nav .nav li:first-child{
+        margin-top: 15%;
+    }
+    .dataTables_wrapper{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .dropdown-container {
+        display: none;
+        background-color: #262626;
+        padding-left: 8px;
+    }
+
+    .svg{
+        fill: none;
+    }
+
+
+
+</style>
+<style>
+.buttons-excel{
+    background: url(../images/xl.png) !important;
+    background-size: 30px !important;
+    padding-top:17px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    margin-bottom: 7px !important;
+    background-color: #ffffff !important;
+    border: white !important;
+    -webkit-text-fill-color: rgba(236, 228, 228, 0.09) !important; 
+}
+.buttons-pdf{
+    background: url(../images/pdf1.png) !important;
+    background-size: 30px !important;
+    padding-top:17px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    margin-bottom: 7px !important; 
+    background-color: #ffffff !important;
+    border: white !important;
+    -webkit-text-fill-color: rgba(236, 228, 228, 0.09)!important; 
+}
+.buttons-copy{
+    background: url(../images/cp.png) !important;
+    background-size: 34px !important;
+    padding-top:17px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important; 
+    margin-bottom: 7px !important;
+    background-color: #ffffff !important;
+    border: white !important;
+    -webkit-text-fill-color: rgba(236, 228, 228, 0.09) !important; 
+}
+
+</style>
+
+
+
+
+<main class="main">
+    <ol class="breadcrumb">
+        
+            
+        <li class="breadcrumb-menu d-md-down-none">
+            <div class="btn-group" role="group" aria-label="Button group">
+                <!-- <a class="btn" href="#">
+                    <i class="icon-speech"></i>
+                </a>
+                <a class="btn" href="./"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+                <a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a> -->
+            </div>
+        </li>
+    </ol>
+        
+    <div class="container-fluid">
+       <!--  <div class="col-sm-12">
+                                <a class="w3-btn" href="/#!/main/createmenu" style="float: right;background: #e9602a; border: none;color: white;padding: 5px 23px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 10px;">Add</a>
+                            </div>
+        <div> -->
+            <div class="animated fadeIn">
+                
+                <div class="card" style="margin-top: 57px;">
+                    <div class="card-header" style="background-color: white">
+                        <i class="fa fa-edit"></i> Vendor Wise Menu
+ 
+                        <div class="card-header-actions">
+                            <a class="card-header-action" href="#" target="_blank"><small class="text-muted"></small></a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer" id="DataTables_Table_0_wrapper">
+                            <div class="row">
+                                <div class="col-sm-12" id="runningOrdersTable">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main> 
+<div class="modal fade" id="dlg-details" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg"  role="document" >
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">User Details</h4>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body" >
+                       
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+                <button class="btn btn-success" id="sure" type="button">Save changes</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- <script src="/js/bootstrap.min.js"></script> -->
+<!-- <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+    </script> -->
+
+
+
+
+    <!-- main page script -->
+    
+
+     <script type="text/javascript">
+    
+    function toggleBox(id){
+       alert(id);
+     var json_data = {
+    
+       "mobile" : id
+     }
+     console.log(json_data);
+     $.ajax({ 
+        url: 'https://mom-apicalls.appspot.com/api/active/vendor/account/',
+        type: 'POST',
+        data: JSON.stringify(json_data),
+        contentType: "application/json; charset=utf-8",
+        dataType: 'json',
+        success: function(data){
+           console.log("hi");
+           window.location.reload();
+        }
+      });
+    }
+    
+     function toggleBox1(id){
+       // console.log(rowI);
+      var json_data = {
+       
+       "mobile" : id
+      }
+      console.log(json_data);
+      $.ajax({ 
+        url: 'https://mom-apicalls.appspot.com/api/deactive/vendor/account/',
+        type: 'POST',
+        data: JSON.stringify(json_data),
+        contentType: "application/json; charset=utf-8",
+        dataType: 'json',
+        success: function(data){
+           console.log("hi");
+           window.location.reload();
+        }
+      });
+      // // alert(rowId);
+    }
+
+    function deleteuser(id){
+      alert(id)
+       // console.log(rowI);
+      var json_data = {
+       "mobile" : id
+      }
+      console.log(json_data);
+      $.ajax({ 
+        url: 'https://mom-apicalls.appspot.com/api/delete/vendor/account/',
+        type: 'POST',
+        data: JSON.stringify(json_data),
+        contentType: "application/json; charset=utf-8",
+        dataType: 'json',
+        success: function(data){
+           console.log("hi");
+           window.location.reload();
+        }
+      });
+      // // alert(rowId);
+    }
+</script>
